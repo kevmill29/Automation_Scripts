@@ -31,5 +31,4 @@ foreach($app in $java24Apps){
         #Trigger the silent uninstallation
         Start-Process -FilePath "msiexec.exe" -ArgumentList "/x $productCode /qn  /norestart" -Wait
     }
-    }
 }
