@@ -13,12 +13,12 @@ $regPaths = @(
 $allInstalledApps = Get-ItemProperty -Path $regPaths -ErrorAction SilentlyContinue
 
 #Step 3: Filter list to find only Java 24 or whatever application you want to find
-$java24Apps = $allInstalledApps | Where-Object {$_.DisplayName -match "Java 24"}
+$java24Apps = $allInstalledApps | Where-Object {$_.DisplayName -match "Java.*24" -or $_.DisplayName -match "JDK.*24"}
 
 #Step 4 : Error handling if no applications found
 if($null -eq $java24Apps){
-    Write-Host "No Java 24 applications found. Exiting Script."
-    Exit
+    Write-Host "No Java 24 applications found. Exiting Script." -ForegroundColor Green
+        Exit
 }
 
 #Step 5 Loop through each java 24 installation found
