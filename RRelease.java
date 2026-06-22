@@ -4,7 +4,7 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class RxRelease {
+public class RRelease {
 
     private static final int START_DELAY_MS = 5000;
     private static final int STEP_DELAY_MS = 500;
