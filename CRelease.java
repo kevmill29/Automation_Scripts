@@ -69,6 +69,11 @@ public class CRelease {
         // Step 6: Shift + F4 again
         pressShiftFunction(robot, KeyEvent.VK_F4);
         Thread.sleep(STEP_DELAY_MS);
+    
+        typeText(robot, "I");
+        Thread.sleep(TYPE_DELAY_MS);
+        pressKey(robot, KeyEvent.VK_ENTER);
+        Thread.sleep(STEP_DELAY_MS);
     }
 
     // UTC time in HHmm format
